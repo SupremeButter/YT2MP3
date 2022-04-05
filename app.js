@@ -31,7 +31,7 @@ app.post("/convert-mp3", async (req, res) => {
   videoId === "" ||
   videoId === null 
  ){
-    return res.render("index", { success : dalse, message : "Please enter a valid video ID" });
+    return res.render("index", { success : false, message : "Please enter a valid video ID" });
  } else{
      const fetchAPI = await fetch(`https://youtube-to-mp32.p.rapidapi.com/api/yt_to_mp3${videoId}`, {
          "method": "GET",
