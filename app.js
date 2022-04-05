@@ -1,6 +1,5 @@
 //required packages
 const express = require("express");
-const res = require("express/lib/response");
 const fetch = require("node-fetch")
 require("dotenv").config();
 
@@ -33,7 +32,7 @@ app.post("/convert-mp3", async (req, res) => {
  ){
     return res.render("index", { success : dalse, message : "Please enter a valid video ID" });
  } else{
-     const fetchAPI = await fetch(`https://youtube-mp36.p.rapidapi.com/dl${videoID}`, {
+     const fetchAPI = await fetch(`https://youtube-mp36.p.rapidapi.com/dl${videoId}`, {
          "method" : "GET",
          "headers": {
              "x-rapidapi-key" : process.env.API_KEY,
