@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 //needed to parse html data for post request
 app.use(express.urlencoded({
-    entended: true
+    extended: true
 }))
 app.use(express.json());
 
