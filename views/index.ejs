@@ -22,19 +22,18 @@
         </form>
     </div>
 
-    <div class="bottom-container">
-        <% if(typeof success != "undefined" && success) { %>
-            <div class="success">
-                <p><%= song_title %></p>
-                <a href="<% song_link %>"><button id="download-btn">DOWNLOAD</button></a>
-                <% } else if(typeof success != "undefined" && !success) { %>
-                    <div class="errors">
-                        <p><%= message %></p>
-                    </div>
-                 
-                <% }; %>
-         
+<div class="bottom-container">
+  <% if (typeof success != "undefined" && success) { %>
+    <div class="success">
+      <p> <%= song_title %> </p>
+      <a href="<%= song_link %>"><button id="download-btn">DOWNLOAD</button></a>
     </div>
+  <% } else if (typeof success != "undefined" && !success) { %>
+    <div class="errors">
+      <p> <%= message %> </p>
+    </div>
+  <% } %>
+</div>
 
 </body>
 </html>
